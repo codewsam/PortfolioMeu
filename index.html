@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Samuel // OUTLOUD Edition - Portfólio de Engenharia de Software, Matemática (UFAL) e Automação Estrutural de Concreto Armado com Python, TQS e Revit."
+    />
+    <title>Samuel // OUTLOUD - Engenharia Estrutural & Automação</title>
+
+    <!-- GOOGLE FONTS (Pixelify Sans, Bebas Neue, Space Grotesk, Space Mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pixelify+Sans:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css?v=15" />
+  </head>
+  <body>
+    <!-- FITA MARQUEE EM MOVIMENTO NO TOPO (STREETWEAR RIBBON) -->
+    <div class="marquee-ribbon" aria-hidden="true">
+      <div class="marquee-content">
+        <span class="marquee-item"><span class="marquee-star">✦</span> SAMUEL</span>
+        <span class="marquee-item"><span class="marquee-star">★</span> ENGENHARIA DE SOFTWARE</span>
+        <span class="marquee-item"><span class="marquee-star">✦</span> TQS & REVIT PYTHON AUTOMATIONS</span>
+        <span class="marquee-item"><span class="marquee-star">★</span> MATEMÁTICA UFAL</span>
+        <span class="marquee-item"><span class="marquee-star">✦</span> NBR 6118 COMPLIANT</span>
+        <span class="marquee-item"><span class="marquee-star">★</span> ZERO RETRABALHO</span>
+        <span class="marquee-item"><span class="marquee-star">✦</span> G3 PLUGINS</span>
+        <span class="marquee-item"><span class="marquee-star">★</span> OUTLOUD EDITION</span>
+      </div>
+      <div class="marquee-content">
+        <span class="marquee-item"><span class="marquee-star">✦</span> SAMUEL</span>
+        <span class="marquee-item"><span class="marquee-star">★</span> ENGENHARIA DE SOFTWARE</span>
+        <span class="marquee-item"><span class="marquee-star">✦</span> TQS & REVIT PYTHON AUTOMATIONS</span>
+        <span class="marquee-item"><span class="marquee-star">★</span> MATEMÁTICA UFAL</span>
+        <span class="marquee-item"><span class="marquee-star">✦</span> NBR 6118 COMPLIANT</span>
+        <span class="marquee-item"><span class="marquee-star">★</span> ZERO RETRABALHO</span>
+        <span class="marquee-item"><span class="marquee-star">✦</span> G3 PLUGINS</span>
+        <span class="marquee-item"><span class="marquee-star">★</span> OUTLOUD EDITION</span>
+      </div>
+    </div>
+
+    <div class="page-shell">
+      <!-- TOPBAR RETRO-STREETWEAR -->
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Samuel - Voltar ao início">
+          <span class="brand-pixel-badge">SAMUEL</span>
+          <div class="brand-meta">
+            <span class="brand-name" data-i18n="brand_subtitle">Samuel • Dev & Engenharia</span>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#projetos" data-i18n="nav_projects">// PROJETOS</a>
+          <a href="#sobre" data-i18n="nav_about">// SOBRE</a>
+          <a href="#outros-projetos" data-i18n="nav_more_projects">// MAIS PROJETOS</a>
+          <a href="#contato" data-i18n="nav_contact">// CONTATO</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <!-- DISJUNTOR RETRÔ INDUSTRIAL DE IDIOMA (PT / EN) -->
+          <div class="lang-breaker-widget" title="Alternar idioma (PT / EN)">
+            <span class="breaker-screw" aria-hidden="true">•</span>
+            <span class="breaker-label-text">LANG</span>
+            <button
+              type="button"
+              class="breaker-switch"
+              id="langBreakerBtn"
+              role="switch"
+              aria-checked="false"
+              aria-label="Alternar idioma do site entre Português e Inglês"
+            >
+              <span class="breaker-slot">
+                <span class="breaker-opt opt-pt active" id="optPt">PT</span>
+                <span class="breaker-lever" id="breakerLever">
+                  <span class="breaker-lever-grip"></span>
+                </span>
+                <span class="breaker-opt opt-en" id="optEn">EN</span>
+              </span>
+            </button>
+            <span class="breaker-screw" aria-hidden="true">•</span>
+          </div>
+
+          <a class="btn btn-secondary" href="#contato" data-i18n="nav_contact_btn">
+            Falar comigo
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <!-- HERO POSTER SHOWCASE (VIBE STREETWEAR / OUTLOUD) -->
+        <section id="home" class="hero-poster-container">
+          <!-- TÍTULO GIGANTE PIXEL "SEJA BEM-VINDO" -->
+          <div class="hero-pixel-title-wrapper">
+            <h1 class="hero-pixel-title" data-i18n="hero_title">SEJA BEM-VINDO</h1>
+          </div>
+
+          <!-- SLOGAN CONDENSADO IMPACTANTE (VIBE WEAR IT LIKE YOU MEAN IT) -->
+          <div class="hero-poster-body">
+            <div class="hero-poster-copy">
+              <div class="hero-editorial-slogan">
+                CODE IT LIKE YOU MEAN IT.
+              </div>
+
+              <p class="hero-poster-desc" data-i18n="hero_desc">
+                Sou Samuel, formado em <strong>Engenharia de Software</strong> e acadêmico de
+                <strong>Matemática na UFAL</strong>. Crio rotinas de alta performance, plugins em Python
+                para TQS e Revit, e algoritmos sob medida que eliminam retrabalho e trazem precisão
+                absoluta a projetos de concreto armado.
+              </p>
+
+              <div class="hero-cta-row">
+                <a class="btn btn-cobalt" href="#projetos" data-i18n="hero_btn_projects">
+                  Explorar projetos
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </a>
+                <a class="btn btn-secondary" href="#contato" data-i18n="hero_btn_contact">
+                  Solicitar contato
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- COLUNA DE STICKERS STREETWEAR (SMILEY, CURSOR PIXEL, BARCODE) -->
+            <div class="poster-stickers-column">
+              <!-- Sticker Smiley Outloud -->
+              <div class="sticker-smiley" title="Good vibes & clean code">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" fill="#FEF1CF"/>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                  <line x1="9" y1="9" x2="9.01" y2="9" stroke-width="3"/>
+                  <line x1="15" y1="9" x2="15.01" y2="9" stroke-width="3"/>
+                </svg>
+              </div>
+
+              <!-- Sticker Tag NBR 6118 -->
+              <div class="sticker sticker-cream">
+                <span>✦ NBR 6118 COMPLIANT</span>
+              </div>
+
+              <!-- Sticker Pixel Pointer Cursor -->
+              <div class="sticker sticker-blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 2v18l5-5 4 8 3-1.5-4-8h6L4 2z"/>
+                </svg>
+                <span>PYTHON AUTOMATION</span>
+              </div>
+
+              <!-- Card de Código de Barras Streetwear -->
+              <div class="sticker-barcode-card">
+                <svg class="barcode-svg" viewBox="0 0 130 32" fill="#000000">
+                  <rect x="0" y="0" width="3" height="32"/>
+                  <rect x="5" y="0" width="1" height="32"/>
+                  <rect x="8" y="0" width="4" height="32"/>
+                  <rect x="15" y="0" width="2" height="32"/>
+                  <rect x="19" y="0" width="5" height="32"/>
+                  <rect x="27" y="0" width="2" height="32"/>
+                  <rect x="32" y="0" width="4" height="32"/>
+                  <rect x="39" y="0" width="1" height="32"/>
+                  <rect x="42" y="0" width="6" height="32"/>
+                  <rect x="51" y="0" width="3" height="32"/>
+                  <rect x="56" y="0" width="2" height="32"/>
+                  <rect x="61" y="0" width="5" height="32"/>
+                  <rect x="69" y="0" width="2" height="32"/>
+                  <rect x="73" y="0" width="4" height="32"/>
+                  <rect x="80" y="0" width="1" height="32"/>
+                  <rect x="84" y="0" width="5" height="32"/>
+                  <rect x="92" y="0" width="3" height="32"/>
+                  <rect x="97" y="0" width="2" height="32"/>
+                  <rect x="102" y="0" width="4" height="32"/>
+                  <rect x="109" y="0" width="6" height="32"/>
+                  <rect x="118" y="0" width="2" height="32"/>
+                  <rect x="122" y="0" width="4" height="32"/>
+                  <rect x="128" y="0" width="2" height="32"/>
+                </svg>
+                <span class="barcode-label">NO-BUGS // UFAL-AL // 1.504</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SEÇÃO DE PROJETOS EM DESTAQUE (DROP 01 - PUNÇÃO TQS) -->
+        <section id="projetos" class="featured-project-section" aria-label="Projetos em Destaque">
+          <div class="section-heading">
+            <span class="eyebrow" data-i18n="featured_eyebrow">PROJETO EM DESTAQUE</span>
+            <h2 data-i18n="proj1_title">Automação Estrutural • Armação de Punção em Lajes</h2>
+          </div>
+
+          <div class="project-showcase-card">
+            <p class="project-showcase-desc" data-i18n="proj1_desc">
+              Plugin para o <strong>TQS</strong> que automatiza o reforço de punção na ligação laje-pilar. Você pode <strong>copiar o pilar direto do desenho</strong> para capturar as medidas exatas e gerar a planta e os cortes executivos em <strong>1 clique</strong>.
+            </p>
+
+            <!-- GRADE COM AS DUAS IMAGENS (INTERFACE + DESENHO TQS) -->
+            <div class="project-dual-grid">
+              <!-- Janela 1: Interface Paramétrica -->
+              <div class="project-window">
+                <div class="project-window-header">
+                  <div class="terminal-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="project-window-title">G3_Plugins_Puncao_GUI.py</span>
+                  <span class="project-window-tag pink">Interface do Plugin</span>
+                </div>
+                <div
+                  class="project-window-img-wrap"
+                  onclick="openLightbox('assets/puncao-plugin-ui.jpg', '')"
+                  title="Clique para ampliar a interface"
+                >
+                  <img
+                    src="assets/puncao-plugin-ui.jpg"
+                    alt="Interface paramétrica do Plugin de Armação de Punção para TQS"
+                    loading="lazy"
+                  />
+                  <div class="project-img-overlay-hint">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    Ampliar Interface
+                  </div>
+                </div>
+              </div>
+
+              <!-- Janela 2: Desenho Técnico CAD no TQS -->
+              <div class="project-window">
+                <div class="project-window-header">
+                  <div class="terminal-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="project-window-title">PUNCAO_P10_P13.DWG (TQS CAD)</span>
+                  <span class="project-window-tag">Desenho Gerado</span>
+                </div>
+                <div
+                  class="project-window-img-wrap"
+                  onclick="openLightbox('assets/puncao-desenho-cad.png', '')"
+                  title="Clique para ampliar o desenho CAD"
+                >
+                  <img
+                    src="assets/puncao-desenho-cad.png"
+                    alt="Desenho técnico executivo de punção gerado automaticamente no TQS"
+                    loading="lazy"
+                  />
+                  <div class="project-img-overlay-hint">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    Ampliar Desenho CAD
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- GRID DE DESTAQUES TÉCNICOS -->
+            <div class="project-highlights-grid">
+              <div class="highlight-pill">
+                <span class="highlight-icon">⚡</span>
+                <span class="highlight-text" data-i18n="proj1_hl1">Exportação em 1 clique: botão "Confirmar e Colar no Desenho"</span>
+              </div>
+              <div class="highlight-pill">
+                <span class="highlight-icon">📐</span>
+                <span class="highlight-text" data-i18n="proj1_hl2">Rigor NBR 6118 com verificação geométrica (X e X' ≤ 0,5·d)</span>
+              </div>
+              <div class="highlight-pill">
+                <span class="highlight-icon">🗲</span>
+                <span class="highlight-text" data-i18n="proj1_hl3">Geração automática de ferros inclinados nas 4 quinas da laje</span>
+              </div>
+              <div class="highlight-pill">
+                <span class="highlight-icon">📊</span>
+                <span class="highlight-text" data-i18n="proj1_hl4">Cortes A-A e B-B automáticos com armaduras positiva e negativa</span>
+              </div>
+            </div>
+
+            <!-- BOTÃO DE AÇÃO -->
+            <div class="project-actions-row">
+              <a class="btn btn-primary" href="#contato" data-i18n="proj_btn_discuss">
+                Conversar sobre o projeto
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- SEGUNDA FITA MARQUEE INTERMEDIÁRIA (CREAM & BLUE) -->
+        <div class="marquee-ribbon cream-flavor" aria-hidden="true">
+          <div class="marquee-content">
+            <span class="marquee-item"><span class="marquee-star">✦</span> RIGOR ESTRUTURAL</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> ARQUITETURA DE SOFTWARE</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> DETALHAMENTO INTELIGENTE</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> CONCRETO ARMADO</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> NBR 6118</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> PYTHON PLUGINS</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> UFAL // ALAGOAS</span>
+          </div>
+          <div class="marquee-content">
+            <span class="marquee-item"><span class="marquee-star">✦</span> RIGOR ESTRUTURAL</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> ARQUITETURA DE SOFTWARE</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> DETALHAMENTO INTELIGENTE</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> CONCRETO ARMADO</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> NBR 6118</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> PYTHON PLUGINS</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> UFAL // ALAGOAS</span>
+          </div>
+        </div>
+
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre" class="info-section">
+          <div class="section-heading">
+            <span class="eyebrow" data-i18n="about_eyebrow">SOBRE O SAMUEL</span>
+            <h2 data-i18n="about_title">DEV, ENGENHARIA & GAME CREATOR</h2>
+          </div>
+
+          <!-- CONSOLE GAME BOY HANDHELD RETRÔ -->
+          <div class="gameboy-console">
+            <!-- Topo do Console: Chave Power On/Off e Ranhuras -->
+            <div class="gameboy-top-bar">
+              <div class="gameboy-power-switch">
+                <span class="power-arrow">◀</span> OFF • ON <span class="power-arrow">▶</span>
+              </div>
+              <div class="gameboy-top-grooves">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <!-- MOLDURA DA TELA (SCREEN BEZEL) -->
+            <div class="gameboy-screen-bezel">
+              <!-- Barra de status superior da moldura -->
+              <div class="gameboy-bezel-header">
+                <div class="gameboy-battery-indicator">
+                  <span class="battery-led"></span>
+                  <span class="battery-label">BATTERY</span>
+                </div>
+                <div class="gameboy-brand-title">
+                  <span class="gb-title-main">GAME BOY</span>
+                  <span class="gb-color-tag">
+                    <span class="c-c">C</span><span class="c-o">O</span><span class="c-l">L</span><span class="c-o2">O</span><span class="c-r">R</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Tela Interna do Console (Space Invaders + Samuel Dialogue) -->
+              <div class="gameboy-lcd-screen">
+                <!-- Barra de Status do Jogo -->
+                <div class="arcade-header-bar">
+                  <span class="arcade-status-tag">🕹️ SAMUEL ARCADE // LVL 99</span>
+                  <div class="arcade-scores">
+                    <span>1UP <strong>2026</strong></span>
+                    <span>HI <strong>99999</strong></span>
+                  </div>
+                </div>
+
+                <!-- Viewport do jogo Space Invaders -->
+                <div class="arcade-screen-viewport">
+                  <canvas id="spaceInvadersCanvas" aria-label="Mini-game Space Invaders interativo"></canvas>
+                  <span class="arcade-screen-hint">👾 Toque ou use os botões</span>
+                </div>
+
+                <!-- Área de Perfil: Balão de Diálogo + Foto de Samuel -->
+                <div class="arcade-profile-area">
+                  <div class="pixel-speech-bubble">
+                    <div class="speech-speaker-row">
+                      <span class="pokemon-badge" data-i18n="about_trivia_badge">CURIOSIDADE ✦</span>
+                    </div>
+                    <p class="speech-text" data-i18n="about_trivia_text">
+                      Também me aventuro na criação de fan games de Pokémon, onde por acaso aprendi um pouco da linguagem Ruby! 🎮👾
+                    </p>
+                    <span class="speech-dialogue-arrow" aria-hidden="true">▼</span>
+                  </div>
+
+                  <div class="arcade-character-stage">
+                    <div class="arcade-side-sticker left-sticker">
+                      <span class="sticker-chip">✦ FAN GAMES</span>
+                      <span class="sticker-chip-sub">POKÉMON ESSENTIALS</span>
+                    </div>
+
+                    <div class="arcade-avatar-wrap">
+                      <img
+                        src="assets/samuel-avatar.png?v=2"
+                        alt="Samuel - Engenheiro de Software e Criador de Fan Games"
+                        class="samuel-portrait-cutout"
+                      />
+                    </div>
+
+                    <div class="arcade-side-sticker right-sticker">
+                      <span class="sticker-chip">★ LEVEL 99</span>
+                      <span class="sticker-chip-sub">EXP: ∞ // HP: MAX</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CONTROLES DO GAME BOY (D-PAD, BOTÕES A/B, START/SELECT, ALTO-FALANTE) -->
+            <div class="gameboy-controls-area">
+              <!-- Logotipo Relevo no Chassi -->
+              <div class="gameboy-chassis-logo">
+                <span>SAMUEL</span>
+                <span class="logo-sub">CUSTOM POCKET ENGINE</span>
+              </div>
+
+              <div class="gameboy-buttons-row">
+                <!-- D-PAD CRUZ DIRECIONAL -->
+                <div class="gameboy-dpad-wrap" aria-label="Direcional D-Pad">
+                  <div class="dpad-cross">
+                    <button class="dpad-btn dpad-up" id="btnDpadUp" aria-label="Cima" type="button">▲</button>
+                    <button class="dpad-btn dpad-left" id="btnDpadLeft" aria-label="Esquerda" type="button">◀</button>
+                    <div class="dpad-center"></div>
+                    <button class="dpad-btn dpad-right" id="btnDpadRight" aria-label="Direita" type="button">▶</button>
+                    <button class="dpad-btn dpad-down" id="btnDpadDown" aria-label="Baixo" type="button">▼</button>
+                  </div>
+                </div>
+
+                <!-- BOTÕES DE AÇÃO A & B -->
+                <div class="gameboy-action-buttons-wrap">
+                  <div class="action-buttons-pill">
+                    <div class="action-btn-group">
+                      <button class="gameboy-round-btn btn-b" id="btnActionB" type="button" aria-label="Botão B">B</button>
+                      <span class="btn-label">B</span>
+                    </div>
+                    <div class="action-btn-group">
+                      <button class="gameboy-round-btn btn-a" id="btnActionA" type="button" aria-label="Botão A">A</button>
+                      <span class="btn-label">A</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LINHA INFERIOR: SELECT, START & SPEAKER SLOTS -->
+              <div class="gameboy-bottom-row">
+                <div class="gameboy-meta-buttons">
+                  <div class="meta-btn-item">
+                    <button class="rubber-pill-btn" id="btnSelect" type="button" aria-label="Select"></button>
+                    <span>SELECT</span>
+                  </div>
+                  <div class="meta-btn-item">
+                    <button class="rubber-pill-btn" id="btnStart" type="button" aria-label="Start"></button>
+                    <span>START</span>
+                  </div>
+                </div>
+
+                <!-- Saídas de som / Alto-falante em slots diagonais -->
+                <div class="gameboy-speaker-grille" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+
+              <!-- Marcação de Fone na base -->
+              <div class="gameboy-phones-jack">
+                <span>🎧 PHONES</span>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- TERCEIRA FITA MARQUEE INTERMEDIÁRIA (COBALT BLUE & CREAM) -->
+        <div class="marquee-ribbon blue-flavor" aria-hidden="true">
+          <div class="marquee-content">
+            <span class="marquee-item"><span class="marquee-star">✦</span> G3 PLUGINS</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> AUTOMAÇÃO DE FÔRMAS</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> FEITO EM 3 CLIQUES</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> TQS EAG CAD</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> ZERO RETRABALHO</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> NBR 6118</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> PYTHON STRUCTURAL ENGINE</span>
+          </div>
+          <div class="marquee-content">
+            <span class="marquee-item"><span class="marquee-star">✦</span> G3 PLUGINS</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> AUTOMAÇÃO DE FÔRMAS</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> FEITO EM 3 CLIQUES</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> TQS EAG CAD</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> ZERO RETRABALHO</span>
+            <span class="marquee-item"><span class="marquee-star">★</span> NBR 6118</span>
+            <span class="marquee-item"><span class="marquee-star">✦</span> PYTHON STRUCTURAL ENGINE</span>
+          </div>
+        </div>
+
+        <!-- SEÇÃO DE PROJETO EM DESTAQUE 02 (DROP 02 - FÔRMAS TQS EM 3 CLIQUES) -->
+        <section id="projeto-formas" class="featured-project-section" aria-label="Projeto Fôrmas em Destaque">
+          <div class="section-heading">
+            <span class="eyebrow" data-i18n="featured_eyebrow">PROJETO EM DESTAQUE</span>
+            <h2 data-i18n="proj2_title">Automação de Fôrmas • Cotagem Estrutural no TQS</h2>
+          </div>
+
+          <div class="project-showcase-card">
+            <p class="project-showcase-desc" data-i18n="proj2_desc">
+              Plugin criado para o <strong>TQS</strong> que desenha todas as medidas e cotas da planta de fôrmas de forma automática. Em vez de passar horas medindo viga por viga no CAD, a ferramenta gera o desenho técnico completo em <strong>apenas 3 cliques</strong> — sem sobreposições e pronto para a obra.
+            </p>
+
+            <!-- JANELA DO DESENHO TÉCNICO CAD -->
+            <div class="project-window single-window">
+              <div class="project-window-header">
+                <div class="terminal-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="project-window-title">EAG_FORMA_FINAL.DWG (TQS CAD // G3 PLUGINS)</span>
+                <span class="project-window-tag pink" data-i18n="proj2_tag">Feito em 3 Cliques</span>
+              </div>
+              <div
+                class="project-window-img-wrap"
+                onclick="openLightbox('assets/formas-tqs-cad.png', '')"
+                title="Clique para ampliar a planta de fôrmas"
+              >
+                <img
+                  src="assets/formas-tqs-cad.png"
+                  alt="Planta de fôrmas cotada automaticamente no TQS em 3 cliques"
+                  loading="lazy"
+                />
+                <div class="project-img-overlay-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Planta CAD
+                </div>
+              </div>
+            </div>
+
+            <!-- GRID DE DESTAQUES TÉCNICOS -->
+            <div class="project-highlights-grid">
+              <div class="highlight-pill">
+                <span class="highlight-icon">⚡</span>
+                <span class="highlight-text" data-i18n="proj2_hl1">Feito em 3 cliques: desenho executivo de fôrmas cotado instantaneamente</span>
+              </div>
+              <div class="highlight-pill">
+                <span class="highlight-icon">📐</span>
+                <span class="highlight-text" data-i18n="proj2_hl2">Algoritmo anti-sobreposição: textos e cotas perfeitamente legíveis</span>
+              </div>
+              <div class="highlight-pill">
+                <span class="highlight-icon">🧱</span>
+                <span class="highlight-text" data-i18n="proj2_hl3">Reconhece vigas normais e invertidas, pilares e desníveis de lajes</span>
+              </div>
+              <div class="highlight-pill">
+                <span class="highlight-icon">💼</span>
+                <span class="highlight-text" data-i18n="proj2_hl4">Integrado direto ao menu do TQS (G3 Plugins) em produção real</span>
+              </div>
+            </div>
+
+            <!-- BOTÃO DE AÇÃO -->
+            <div class="project-actions-row">
+              <a class="btn btn-primary" href="#contato" data-i18n="proj_btn_discuss">
+                Conversar sobre o projeto
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- SEÇÃO CARROSSEL DE OUTROS PROJETOS -->
+        <section id="outros-projetos" class="info-section gallery-section" aria-label="Galeria de Outros Projetos">
+          <div class="section-heading">
+            <span class="eyebrow" data-i18n="carousel_eyebrow">OUTROS PROJETOS & AUTOMAÇÕES</span>
+            <h2 data-i18n="carousel_title">Mais Criações & Ferramentas</h2>
+            <p class="gallery-lead-text" data-i18n="carousel_lead">
+              Foto de mais alguns projetos! Se quiser ver mais ou falar sobre algum específico, é só me chamar. ✦
+            </p>
+          </div>
+
+          <!-- CONTAINER DO CARROSSEL COM CONTROLES -->
+          <div class="projects-carousel-wrapper">
+            <button class="carousel-arrow carousel-arrow-left" id="carouselPrevBtn" aria-label="Projeto anterior" type="button">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+
+            <div class="projects-carousel-track" id="projectsCarouselTrack">
+              <!-- Card 1: Armação de Laje Nervurada -->
+              <div class="carousel-project-card">
+                <div class="carousel-card-header">
+                  <div class="terminal-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="carousel-card-tag pink">TQS PLUGIN</span>
+                </div>
+                <div
+                  class="carousel-img-wrap"
+                  onclick="openLightbox('assets/projeto-laje-nervurada.png', '')"
+                  title="Clique para ampliar"
+                >
+                  <img
+                    src="assets/projeto-laje-nervurada.png"
+                    alt="Plugin de Armação de Laje Nervurada para TQS"
+                    loading="lazy"
+                  />
+                  <div class="project-img-overlay-hint">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    Ampliar
+                  </div>
+                </div>
+                <div class="carousel-card-body">
+                  <h4 data-i18n="card1_title">Laje Nervurada (Vertical)</h4>
+                  <p data-i18n="card1_desc">Interface paramétrica no TQS para armação e distribuição contínua de ferros em nervuras.</p>
+                </div>
+              </div>
+
+              <!-- Card 2: Contas & Cartão (Web App) -->
+              <div class="carousel-project-card">
+                <div class="carousel-card-header">
+                  <div class="terminal-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="carousel-card-tag blue">WEB & MOBILE APP</span>
+                </div>
+                <div
+                  class="carousel-img-wrap"
+                  onclick="openLightbox('assets/projeto-contas-cartao.jpg', '')"
+                  title="Clique para ampliar"
+                >
+                  <img
+                    src="assets/projeto-contas-cartao.jpg"
+                    alt="Aplicativo web Contas e Cartão de crédito"
+                    loading="lazy"
+                  />
+                  <div class="project-img-overlay-hint">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    Ampliar
+                  </div>
+                </div>
+                <div class="carousel-card-body">
+                  <h4 data-i18n="card2_title">Contas & Cartão (Finanças)</h4>
+                  <p data-i18n="card2_desc">Dashboard de divisão inteligente de faturas, rateio por pessoa e exportação para WhatsApp.</p>
+                </div>
+              </div>
+
+              <!-- Card 3: Armação da Escada (GUI TQS) -->
+              <div class="carousel-project-card">
+                <div class="carousel-card-header">
+                  <div class="terminal-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="carousel-card-tag pink">TQS PLUGIN</span>
+                </div>
+                <div
+                  class="carousel-img-wrap"
+                  onclick="openLightbox('assets/projeto-escada-gui.png', '')"
+                  title="Clique para ampliar"
+                >
+                  <img
+                    src="assets/projeto-escada-gui.png"
+                    alt="Plugin de Armação de Escada Plissada no TQS"
+                    loading="lazy"
+                  />
+                  <div class="project-img-overlay-hint">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    Ampliar
+                  </div>
+                </div>
+                <div class="carousel-card-body">
+                  <h4 data-i18n="card3_title">Cálculo de Escada Plissada</h4>
+                  <p data-i18n="card3_desc">GUI paramétrica com cálculo de degraus, patamares, bitolas e dobras automáticas no TQS.</p>
+                </div>
+              </div>
+
+              <!-- Card 4: Detalhamento Executivo CAD de Escada -->
+              <div class="carousel-project-card">
+                <div class="carousel-card-header">
+                  <div class="terminal-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="carousel-card-tag cream">TQS CAD EXECUTIVO</span>
+                </div>
+                <div
+                  class="carousel-img-wrap"
+                  onclick="openLightbox('assets/projeto-escada-cad.png', '')"
+                  title="Clique para ampliar"
+                >
+                  <img
+                    src="assets/projeto-escada-cad.png"
+                    alt="Planta e cortes executivos de escada gerados no TQS"
+                    loading="lazy"
+                  />
+                  <div class="project-img-overlay-hint">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    Ampliar
+                  </div>
+                </div>
+                <div class="carousel-card-body">
+                  <h4 data-i18n="card4_title">Planta & Cortes da Escada</h4>
+                  <p data-i18n="card4_desc">Desenho executivo gerado automaticamente com 20 degraus cotados, cortes A-A / B-B e resumo.</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-arrow carousel-arrow-right" id="carouselNextBtn" aria-label="Próximo projeto" type="button">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- SEÇÃO CONTATO (OUTLOUD BILLBOARD) -->
+        <section id="contato" class="contact-box">
+          <div class="contact-content">
+            <h2 data-i18n="contact_slogan">LET'S BUILD SOMETHING OUTLOUD.</h2>
+            <p data-i18n="contact_desc">
+              Vamos transformar a rotina do seu escritório de cálculo, criar rotinas inteligentes em Python
+              para TQS e Revit, ou desenvolver ferramentas web sob medida com zero retrabalho.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:araujosamuel097@gmail.com" id="mailBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              araujosamuel097@gmail.com
+            </a>
+            <a class="btn btn-secondary" href="https://github.com/codewsam" target="_blank" rel="noopener noreferrer" id="githubBtn" title="GitHub codewsam">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub @codewsam
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="footer-tags">
+          <span>G3 PLUGINS</span>
+          <span>•</span>
+          <span>UFAL MATEMÁTICA</span>
+          <span>•</span>
+          <span>NBR 6118</span>
+          <span>•</span>
+          <span>PYTHON & TQS API</span>
+        </div>
+        <p>© <span id="year"></span> Samuel. <span data-i18n="footer_role">Engenharia Estrutural, Automação & Software</span>. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <!-- MODAL LIGHTBOX PARA VISUALIZAÇÃO EM ALTA RESOLUÇÃO -->
+    <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="lightbox-box">
+        <div class="lightbox-header">
+          <span id="lightboxTitle" class="lightbox-title">Visualização do Projeto</span>
+          <button type="button" class="lightbox-close-btn" id="lightboxClose" aria-label="Fechar visualização" data-i18n="lightbox_close">✕ FECHAR</button>
+        </div>
+        <div class="lightbox-img-wrap">
+          <img id="lightboxImg" src="" alt="Imagem ampliada do projeto" />
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT DE INTERAÇÕES E ACESSIBILIDADE -->
+    <script>
+      // Atualização dinâmica do ano
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Lightbox Modal para inspecionar imagens em alta resolução
+      const lightboxModal = document.getElementById('lightboxModal');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxTitle = document.getElementById('lightboxTitle');
+      const lightboxClose = document.getElementById('lightboxClose');
+
+      function openLightbox(src, title) {
+        if (!lightboxModal || !lightboxImg) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = title || 'Visualização em tela cheia';
+        if (lightboxTitle) {
+          lightboxTitle.textContent = title || '';
+          lightboxTitle.style.display = title ? 'block' : 'none';
+        }
+        lightboxModal.classList.add('active');
+        lightboxModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        if (!lightboxModal) return;
+        lightboxModal.classList.remove('active');
+        lightboxModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+      }
+
+      if (lightboxModal) {
+        lightboxModal.addEventListener('click', (e) => {
+          if (e.target === lightboxModal) {
+            closeLightbox();
+          }
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+          closeLightbox();
+        }
+      });
+
+      // =========================================================================
+      // SISTEMA DE INTERNACIONALIZAÇÃO (PT / EN) COM DISJUNTOR INDUSTRIAL
+      // =========================================================================
+      const translations = {
+        pt: {
+          brand_subtitle: "Samuel • Dev & Engenharia",
+          nav_projects: "// PROJETOS",
+          nav_about: "// SOBRE",
+          nav_more_projects: "// MAIS PROJETOS",
+          nav_contact: "// CONTATO",
+          nav_contact_btn: 'Falar comigo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
+          hero_title: "SEJA BEM-VINDO",
+          hero_desc: 'Sou Samuel, formado em <strong>Engenharia de Software</strong> e acadêmico de <strong>Matemática na UFAL</strong>. Crio rotinas de alta performance, plugins em Python para TQS e Revit, e algoritmos sob medida que eliminam retrabalho e trazem precisão absoluta a projetos de concreto armado.',
+          hero_btn_projects: 'Explorar projetos <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>',
+          hero_btn_contact: 'Solicitar contato <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
+          featured_eyebrow: "PROJETO EM DESTAQUE",
+          proj1_title: "Automação Estrutural • Armação de Punção em Lajes",
+          proj1_desc: 'Plugin para o <strong>TQS</strong> que automatiza o reforço de punção na ligação laje-pilar. Você pode <strong>copiar o pilar direto do desenho</strong> para capturar as medidas exatas e gerar a planta e os cortes executivos em <strong>1 clique</strong>.',
+          proj1_hl1: 'Exportação em 1 clique: botão "Confirmar e Colar no Desenho"',
+          proj1_hl2: "Rigor NBR 6118 com verificação geométrica (X e X' ≤ 0,5·d)",
+          proj1_hl3: "Geração automática de ferros inclinados nas 4 quinas da laje",
+          proj1_hl4: "Cortes A-A e B-B automáticos com armaduras positiva e negativa",
+          proj_btn_discuss: 'Conversar sobre o projeto <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
+          about_eyebrow: "SOBRE O SAMUEL",
+          about_title: "DEV, ENGENHARIA & GAME CREATOR",
+          about_trivia_badge: "CURIOSIDADE ✦",
+          about_trivia_text: "Também me aventuro na criação de fan games de Pokémon, onde por acaso aprendi um pouco da linguagem Ruby! 🎮👾",
+          proj2_title: "Automação de Fôrmas • Cotagem Estrutural no TQS",
+          proj2_desc: "Plugin criado para o <strong>TQS</strong> que desenha todas as medidas e cotas da planta de fôrmas de forma automática. Em vez de passar horas medindo viga por viga no CAD, a ferramenta gera o desenho técnico completo em <strong>apenas 3 cliques</strong> — sem sobreposições e pronto para a obra.",
+          proj2_tag: "Feito em 3 Cliques",
+          proj2_hl1: "Feito em 3 cliques: desenho executivo de fôrmas cotado instantaneamente",
+          proj2_hl2: "Algoritmo anti-sobreposição: textos e cotas perfeitamente legíveis",
+          proj2_hl3: "Reconhece vigas normais e invertidas, pilares e desníveis de lajes",
+          proj2_hl4: "Integrado direto ao menu do TQS (G3 Plugins) em produção real",
+          carousel_eyebrow: "OUTROS PROJETOS & AUTOMAÇÕES",
+          carousel_title: "Mais Criações & Ferramentas",
+          carousel_lead: "Foto de mais alguns projetos! Se quiser ver mais ou falar sobre algum específico, é só me chamar. ✦",
+          card1_title: "Laje Nervurada (Vertical)",
+          card1_desc: "Interface paramétrica no TQS para armação e distribuição contínua de ferros em nervuras.",
+          card2_title: "Contas & Cartão (Finanças)",
+          card2_desc: "Dashboard de divisão inteligente de faturas, rateio por pessoa e exportação para WhatsApp.",
+          card3_title: "Cálculo de Escada Plissada",
+          card3_desc: "GUI paramétrica com cálculo de degraus, patamares, bitolas e dobras automáticas no TQS.",
+          card4_title: "Planta & Cortes da Escada",
+          card4_desc: "Desenho executivo gerado automaticamente com 20 degraus cotados, cortes A-A / B-B e resumo.",
+          contact_slogan: "LET'S BUILD SOMETHING OUTLOUD.",
+          contact_desc: "Vamos transformar a rotina do seu escritório de cálculo, criar rotinas inteligentes em Python para TQS e Revit, ou desenvolver ferramentas web sob medida com zero retrabalho.",
+          footer_role: "Engenharia Estrutural, Automação & Software",
+          lightbox_close: "✕ FECHAR"
+        },
+        en: {
+          brand_subtitle: "Samuel • Dev & Engineering",
+          nav_projects: "// PROJECTS",
+          nav_about: "// ABOUT",
+          nav_more_projects: "// MORE PROJECTS",
+          nav_contact: "// CONTACT",
+          nav_contact_btn: 'Get in touch <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
+          hero_title: "WELCOME",
+          hero_desc: 'I am Samuel, a <strong>Software Engineer</strong> and <strong>Mathematics major at UFAL</strong>. I build high-performance automation, Python plugins for TQS and Revit, and tailor-made algorithms that eliminate rework and bring absolute precision to reinforced concrete engineering.',
+          hero_btn_projects: 'Explore projects <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>',
+          hero_btn_contact: 'Get in touch <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
+          featured_eyebrow: "FEATURED PROJECT",
+          proj1_title: "Structural Automation • Punching Shear Reinforcement",
+          proj1_desc: 'Parametric plugin for <strong>TQS</strong> automating punching shear detailing at the slab-column interface. You can <strong>copy the column section directly from the CAD drawing</strong> to capture exact dimensions and generate plans and sections in <strong>1 click</strong>.',
+          proj1_hl1: '1-click export: "Confirm and Paste in Drawing" button',
+          proj1_hl2: "NBR 6118 standard compliance with geometric check (X and X' ≤ 0.5·d)",
+          proj1_hl3: "Automatic generation of inclined rebars on all 4 slab corners",
+          proj1_hl4: "Automated sections A-A & B-B with top and bottom reinforcement",
+          proj_btn_discuss: 'Discuss this project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
+          about_eyebrow: "ABOUT SAMUEL",
+          about_title: "DEV, ENGINEERING & GAME CREATOR",
+          about_trivia_badge: "TRIVIA ✦",
+          about_trivia_text: "I also venture into creating Pokémon fan games, which is how I serendipitously learned some Ruby! 🎮👾",
+          proj2_title: "Formwork Automation • Structural Dimensioning in TQS",
+          proj2_desc: "TQS plugin that automatically calculates and draws all dimensions on structural formwork plans. Instead of spending hours measuring beams one by one in CAD, the full executive drawing is generated in <strong>just 3 clicks</strong> — overlap-free and jobsite-ready.",
+          proj2_tag: "Done in 3 Clicks",
+          proj2_hl1: "Done in 3 clicks: executive formwork plan dimensioned instantly",
+          proj2_hl2: "Anti-overlap algorithm: perfectly legible annotations and dimensions",
+          proj2_hl3: "Recognizes regular & inverted beams, columns, and slab step-downs",
+          proj2_hl4: "Integrated directly into TQS main menu (G3 Plugins) in production",
+          carousel_eyebrow: "OTHER PROJECTS & AUTOMATIONS",
+          carousel_title: "More Creations & Tools",
+          carousel_lead: "Photos of a few more projects! If you'd like to see more or discuss a specific one, feel free to reach out. ✦",
+          card1_title: "Ribbed Slab (Vertical)",
+          card1_desc: "Parametric TQS interface for continuous rebar distribution in ribbed slab ribs.",
+          card2_title: "Split & Cards (Finance)",
+          card2_desc: "Smart bill splitting dashboard with per-person expense breakdown and WhatsApp export.",
+          card3_title: "Pleated Staircase Calculation",
+          card3_desc: "Parametric GUI calculating steps, landings, bar diameters, and automatic hooks in TQS.",
+          card4_title: "Staircase Plan & Sections",
+          card4_desc: "Executive drawing automatically generated with 20 dimensioned steps, sections A-A / B-B, and takeoffs.",
+          contact_slogan: "LET'S BUILD SOMETHING OUTLOUD.",
+          contact_desc: "Let's transform your structural engineering firm's workflow, build smart Python plugins for TQS and Revit, or create custom web tools with zero rework.",
+          footer_role: "Structural Engineering, Automation & Software",
+          lightbox_close: "✕ CLOSE"
+        }
+      };
+
+      const langBreakerBtn = document.getElementById('langBreakerBtn');
+      const optPt = document.getElementById('optPt');
+      const optEn = document.getElementById('optEn');
+      let currentLang = localStorage.getItem('samuel_portfolio_lang') || 'pt';
+
+      function applyLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+        localStorage.setItem('samuel_portfolio_lang', lang);
+
+        if (langBreakerBtn) {
+          if (lang === 'en') {
+            langBreakerBtn.classList.add('is-en');
+            langBreakerBtn.setAttribute('aria-checked', 'true');
+            if (optPt) optPt.classList.remove('active');
+            if (optEn) optEn.classList.add('active');
+          } else {
+            langBreakerBtn.classList.remove('is-en');
+            langBreakerBtn.setAttribute('aria-checked', 'false');
+            if (optPt) optPt.classList.add('active');
+            if (optEn) optEn.classList.remove('active');
+          }
+        }
+
+        const dict = translations[lang] || translations.pt;
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) {
+            el.innerHTML = dict[key];
+          }
+        });
+      }
+
+      if (langBreakerBtn) {
+        langBreakerBtn.addEventListener('click', () => {
+          const nextLang = currentLang === 'pt' ? 'en' : 'pt';
+          applyLanguage(nextLang);
+        });
+      }
+
+      // Inicializa idioma salvo ou padrão (pt)
+      applyLanguage(currentLang);
+
+      // Carrossel Automático de Outros Projetos
+      const carouselTrack = document.getElementById('projectsCarouselTrack');
+      const prevBtn = document.getElementById('carouselPrevBtn');
+      const nextBtn = document.getElementById('carouselNextBtn');
+
+      if (carouselTrack) {
+        let isHovered = false;
+        const scrollStep = () => {
+          const card = carouselTrack.querySelector('.carousel-project-card');
+          return card ? card.offsetWidth + 20 : 340;
+        };
+
+        const autoScroll = () => {
+          if (isHovered) return;
+          const maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth - 10;
+          if (carouselTrack.scrollLeft >= maxScroll) {
+            carouselTrack.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            carouselTrack.scrollBy({ left: scrollStep(), behavior: 'smooth' });
+          }
+        };
+
+        let autoScrollInterval = setInterval(autoScroll, 3500);
+
+        const resetTimer = () => {
+          clearInterval(autoScrollInterval);
+          autoScrollInterval = setInterval(autoScroll, 3500);
+        };
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            const maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth - 10;
+            if (carouselTrack.scrollLeft >= maxScroll) {
+              carouselTrack.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+              carouselTrack.scrollBy({ left: scrollStep(), behavior: 'smooth' });
+            }
+            resetTimer();
+          });
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            if (carouselTrack.scrollLeft <= 10) {
+              carouselTrack.scrollTo({ left: carouselTrack.scrollWidth, behavior: 'smooth' });
+            } else {
+              carouselTrack.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
+            }
+            resetTimer();
+          });
+        }
+
+        carouselTrack.addEventListener('mouseenter', () => { isHovered = true; });
+        carouselTrack.addEventListener('mouseleave', () => { isHovered = false; });
+        carouselTrack.addEventListener('touchstart', () => { isHovered = true; }, { passive: true });
+        carouselTrack.addEventListener('touchend', () => {
+          setTimeout(() => { isHovered = false; }, 2000);
+        }, { passive: true });
+      }
+    </script>
+    <!-- ARCADE SPACE INVADERS ENGINE -->
+    <script src="arcade.js?v=3"></script>
+  </body>
+</html>

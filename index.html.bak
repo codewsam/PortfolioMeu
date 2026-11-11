@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio profissional de Samuel, focado em engenharia estrutural, automação TQS, Revit e produtividade em projetos BIM."
+    />
+    <title>Samuel | Sobre mim e Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Voltar ao topo">
+          <span class="brand-mark">S</span>
+          Samuel
+        </a>
+
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#competencias">Competências</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <a class="btn btn-primary" href="#contato">Falar comigo</a>
+      </header>
+
+      <main>
+        <section id="home" class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">BIM • automação • Web</p>
+            <h1>Olá, seja bem vindo! </h1>
+            <p class="lead">
+              Sou Samuel, um profissional com formação em Engenharia de Software e atualmente cursando matemática na Universidade federal de Alagoas, tenho forte foco em
+              automação de processos principalmente na integração entre TQS, Revit. Também atuo com desenvolvimento de aplicações web, e me aventuro na análise de dados.
+            </p>
+
+            <div class="cta-group">
+              <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+              <a class="btn btn-secondary" href="#contato">Solicitar contato</a>
+            </div>
+
+            <ul class="hero-stats" aria-label="Principais áreas de atuação">
+              <li>
+                <strong>TQS</strong>
+                <span>Automação e parametrização</span>
+              </li>
+              <li>
+                <strong>Python</strong>
+                <span>Plugins e scripts personalizados</span>
+              </li>
+              <li>
+                <strong>Revit</strong>
+                <span>BIM + coordenação e documentação</span>
+              </li>
+            </ul>
+          </div>
+
+
+        </section>
+
+        <section id="sobre" class="info-section">
+          <div class="section-heading">
+            <p class="eyebrow">Sobre</p>
+            <h2>Combino engenharia estrutural rigorosa com tecnologia aplicada ao projeto.</h2>
+          </div>
+
+          <div class="about-grid">
+            <article class="glass-card">
+              <h3>Minha base técnica</h3>
+              <p>
+                Trabalho com cálculo e detalhamento estrutural de concreto armado, com atenção
+                às normas, cobrimentos, ancoragens, armaduras longitudinais e transversais e
+                critérios de segurança do projeto executivo.
+              </p>
+            </article>
+            <article class="glass-card">
+              <h3>Meu diferencial</h3>
+              <p>
+                Acredito na transformação de processos manuais em rotinas inteligentes.
+                Desenvolvo automações que reduzem retrabalho, eliminam falhas humanas e
+                aumentam a produtividade no ciclo do projeto.
+              </p>
+            </article>
+            <article class="glass-card">
+              <h3>Como penso</h3>
+              <p>
+                Integro conhecimento normativo, lógica de projeto e ferramentas de programação
+                para criar soluções eficientes, escaláveis e alinhadas ao uso real em obra e
+                na rotina de engenharia.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="competencias" class="info-section">
+          <div class="section-heading">
+            <p class="eyebrow">Competências</p>
+            <h2>Ferramentas, técnicas e automatizações que potencializam a execução do projeto.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <span>Concreto armado</span>
+              <p>Detalhamento executivo, ancoragem, transpasse, nós de armadura e controle de cobrimento.</p>
+            </div>
+            <div class="skill-card">
+              <span>Automação TQS</span>
+              <p>Criação de plugins e fluxos customizados com Python e APIs do TQS para acelerar tarefas repetitivas.</p>
+            </div>
+            <div class="skill-card">
+              <span>Python</span>
+              <p>Desenvolvimento de scripts, lógica geométrica, reconhecimento de elementos e criação de ferramentas sob medida.</p>
+            </div>
+            <div class="skill-card">
+              <span>Revit / BIM</span>
+              <p>Modelagem paramétrica, coordenação, documentação e integração entre analítico e executivo.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projetos" class="info-section">
+          <div class="section-heading">
+            <p class="eyebrow">Projetos</p>
+            <h2>Automações e soluções desenvolvidas para reduzir tempo, aumentar precisão e melhorar a rotina de projeto.</h2>
+          </div>
+
+          <div class="project-carousel" aria-label="Carrossel de projetos em destaque">
+            <button class="carousel-btn prev" type="button" aria-label="Projeto anterior">&#8249;</button>
+
+            <div class="carousel-track">
+              <article class="project-slide active" aria-label="Projeto 1">
+                <div class="project-copy">
+                  <div class="project-tag">TQS</div>
+                  <h3>Plugin de geração de escadas</h3>
+                  <p>
+
+                  </p>
+                  <ul>
+
+                  </ul>
+                  <a href="#contato">Falar sobre este projeto</a>
+                </div>
+
+                <div class="project-visual visual-escada" aria-hidden="true">
+
+                </div>
+              </article>
+
+              <article class="project-slide" aria-label="Projeto 2">
+                <div class="project-copy">
+                  <div class="project-tag">Revit</div>
+                  <h3>Armação inteligente de escadas</h3>
+                  <p>
+
+                  </p>
+                  <ul>
+
+                  </ul>
+                  <a href="#contato">Falar sobre este projeto</a>
+                </div>
+
+                <div class="project-visual visual-arma" aria-hidden="true">
+
+                </div>
+              </article>
+
+              <article class="project-slide" aria-label="Projeto 3">
+                <div class="project-copy">
+                  <div class="project-tag">BIM</div>
+                  <h3>Fluxos integrados TQS</h3>
+                  <p>
+
+                  </p>
+                  <ul>
+
+                  </ul>
+                  <a href="#contato">Falar sobre este projeto</a>
+                </div>
+
+                <div class="project-visual visual-bim" aria-hidden="true">
+
+                </div>
+              </article>
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Próximo projeto">&#8250;</button>
+          </div>
+
+          <div class="carousel-dots" aria-label="Navegação do carrossel">
+            <button class="dot is-active" type="button" aria-label="Slide 1"></button>
+            <button class="dot" type="button" aria-label="Slide 2"></button>
+            <button class="dot" type="button" aria-label="Slide 3"></button>
+          </div>
+        </section>
+
+        <section id="contato" class="contact-box">
+          <div>
+            <p class="eyebrow">Contato</p>
+            <h2>Vamos transformar processos e entregar projetos mais inteligentes.</h2>
+          </div>
+
+          <a class="btn btn-primary" href="mailto:samuel@email.com">samuel@email.com</a>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span id="year"></span> Samuel. Todos os direitos reservados.</p>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const slides = Array.from(document.querySelectorAll('.project-slide'));
+      const dots = Array.from(document.querySelectorAll('.dot'));
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      let currentSlide = 0;
+      let autoPlay = null;
+
+      function showSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === currentSlide);
+        });
+
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('is-active', i === currentSlide);
+        });
+      }
+
+      function goToNext() {
+        showSlide(currentSlide + 1);
+      }
+
+      function startAutoPlay() {
+        stopAutoPlay();
+        autoPlay = setInterval(goToNext, 5000);
+      }
+
+      function stopAutoPlay() {
+        if (autoPlay) clearInterval(autoPlay);
+      }
+
+      prevBtn.addEventListener('click', () => {
+        showSlide(currentSlide - 1);
+        startAutoPlay();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        showSlide(currentSlide + 1);
+        startAutoPlay();
+      });
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index);
+          startAutoPlay();
+        });
+      });
+
+      startAutoPlay();
+    </script>
+  </body>
+</html>
+
+
