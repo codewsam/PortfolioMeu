@@ -198,43 +198,46 @@
   const btnStart = document.getElementById('btnStart');
   const btnSelect = document.getElementById('btnSelect');
 
-  if (btnLeft) {
-    btnLeft.addEventListener('click', (e) => {
+  const bindTouchOrClick = (el, fn) => {
+    if (!el) return;
+    let touched = false;
+    el.addEventListener('touchstart', (e) => {
       e.preventDefault();
-      player.targetX = Math.max(30, player.targetX - 45);
-    });
-  }
-  if (btnRight) {
-    btnRight.addEventListener('click', (e) => {
+      touched = true;
+      fn(e);
+      setTimeout(() => { touched = false; }, 350);
+    }, { passive: false });
+    el.addEventListener('click', (e) => {
+      if (touched) return;
       e.preventDefault();
-      player.targetX = Math.min(width - 30, player.targetX + 45);
+      fn(e);
     });
-  }
-  if (btnA) {
-    btnA.addEventListener('click', (e) => {
-      e.preventDefault();
-      shootBullet(player.x, player.y - 6);
+  };
+
+  bindTouchOrClick(btnLeft, () => {
+    player.targetX = Math.max(30, player.targetX - 45);
+  });
+
+  bindTouchOrClick(btnRight, () => {
+    player.targetX = Math.min(width - 30, player.targetX + 45);
+  });
+
+  bindTouchOrClick(btnA, () => {
+    shootBullet(player.x, player.y - 6);
+  });
+
+  bindTouchOrClick(btnB, () => {
+    shootBullet(player.x - 8, player.y - 6);
+    shootBullet(player.x + 8, player.y - 6);
+  });
+
+  [btnStart, btnSelect].forEach((b) => {
+    bindTouchOrClick(b, () => {
+      shootBullet(player.x - 12, player.y - 6);
+      shootBullet(player.x, player.y - 8);
+      shootBullet(player.x + 12, player.y - 6);
     });
-  }
-  if (btnB) {
-    btnB.addEventListener('click', (e) => {
-      e.preventDefault();
-      shootBullet(player.x - 8, player.y - 6);
-      shootBullet(player.x + 8, player.y - 6);
-    });
-  }
-  if (btnStart || btnSelect) {
-    [btnStart, btnSelect].forEach((b) => {
-      if (b) {
-        b.addEventListener('click', (e) => {
-          e.preventDefault();
-          shootBullet(player.x - 12, player.y - 6);
-          shootBullet(player.x, player.y - 8);
-          shootBullet(player.x + 12, player.y - 6);
-        });
-      }
-    });
-  }
+  });
 
   resize();
 

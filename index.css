@@ -72,10 +72,16 @@
   padding: 0;
 }
 
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
   background-color: var(--bg-deep);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -86,6 +92,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100%;
   /* Fundo estilo poster streetwear com grid sutil e halftone */
   background-image:
     radial-gradient(circle at 20% 15%, rgba(252, 59, 127, 0.12) 0%, transparent 45%),
@@ -3297,81 +3304,745 @@ section, .featured-project-section, .info-section, .contact-box {
   justify-content: center;
 }
 
+/* ==========================================================================
+   RESPONSIVIDADE COMPLETA PARA DISPOSITIVOS MÓVEIS (MOBILE OPTIMIZATIONS)
+   ========================================================================== */
 @media (max-width: 680px) {
+  /* --- Prevenção absoluta de overflow horizontal --- */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    position: relative;
+  }
+
   .page-shell {
-    width: calc(100% - 24px);
+    width: calc(100% - 20px) !important;
+    max-width: 100% !important;
+    padding: 10px 0 40px !important;
+  }
+
+  /* --- Marquee Ribbons no Mobile --- */
+  .marquee-ribbon {
+    width: 100% !important;
+    margin-left: 0 !important;
+    transform: none !important;
+    font-size: 0.95rem !important;
+    padding: 6px 0 !important;
+  }
+
+  .marquee-ribbon.cream-flavor,
+  .marquee-ribbon.blue-flavor {
+    transform: none !important;
+    margin-top: 32px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .marquee-content {
+    gap: 1.2rem !important;
+    padding-left: 1.2rem !important;
+    animation-duration: 18s !important;
+  }
+
+  .marquee-item {
+    gap: 0.8rem !important;
+  }
+
+  /* --- Topbar & Header --- */
+  .topbar {
+    padding: 8px 10px !important;
+    margin-bottom: 20px !important;
+    border-radius: 16px !important;
+    gap: 8px !important;
   }
 
   .nav {
-    display: none;
+    display: none !important;
   }
 
-  .topbar {
-    padding: 8px 12px;
+  .brand {
+    gap: 0 !important;
+  }
+
+  .brand-meta {
+    display: none !important; /* Esconde texto longo no mobile para não estourar a tela */
+  }
+
+  .brand-pixel-badge {
+    font-size: 1.15rem !important;
+    padding: 2px 8px !important;
   }
 
   .topbar-actions {
-    gap: 8px;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
   }
 
   .lang-breaker-widget {
-    padding: 2px 6px;
-    gap: 4px;
+    padding: 2px 5px !important;
+    gap: 3px !important;
+    border-radius: 6px !important;
+  }
+
+  .breaker-screw {
+    display: none !important;
   }
 
   .breaker-label-text {
-    display: none;
+    display: none !important;
+  }
+
+  .breaker-slot {
+    width: 52px !important;
+    height: 23px !important;
+    padding: 0 4px !important;
+  }
+
+  .breaker-opt {
+    font-size: 0.58rem !important;
+  }
+
+  .breaker-lever {
+    width: 20px !important;
+    height: 17px !important;
+    top: 2px !important;
+    left: 2px !important;
+  }
+
+  .breaker-switch.is-en .breaker-lever {
+    transform: translateX(26px) !important;
   }
 
   .topbar-actions .btn {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.8rem;
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.76rem !important;
+    gap: 4px !important;
+    border-width: 1.5px !important;
   }
 
+  .topbar-actions .btn svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  /* --- Hero Poster Showcase --- */
   .hero-poster-container {
-    padding: 28px 20px;
+    padding: 22px 14px 26px !important;
+    border-radius: 16px !important;
+    border-width: 2.5px !important;
+    box-shadow: 4px 4px 0px #000000, 7px 7px 0px var(--blue) !important;
+    margin-bottom: 32px !important;
   }
 
-  .hero-stats {
-    grid-template-columns: 1fr;
+  .hero-pixel-title-wrapper {
+    margin: 4px 0 16px !important;
   }
 
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .hero-pixel-title {
+    font-size: clamp(1.7rem, 8.5vw, 3.2rem) !important;
+    line-height: 1.05 !important;
+    text-shadow: 3px 3px 0px #000000 !important;
+    word-break: break-word !important;
+  }
+
+  .hero-poster-body {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .hero-editorial-slogan {
+    font-size: clamp(1.35rem, 6.2vw, 2.1rem) !important;
+    line-height: 1 !important;
+    margin-bottom: 12px !important;
+    text-shadow: 2px 2px 0px #000000 !important;
+  }
+
+  .hero-poster-desc {
+    font-size: 0.86rem !important;
+    line-height: 1.5 !important;
+    padding: 12px 14px !important;
+    margin-bottom: 18px !important;
+    border-radius: 10px !important;
   }
 
   .hero-cta-row {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+    margin-bottom: 16px !important;
   }
 
   .hero-cta-row .btn {
-    width: 100%;
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.72rem 1rem !important;
+    font-size: 0.88rem !important;
   }
 
-  .carousel-btn {
-    display: none;
+  .poster-stickers-column {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
   }
 
-  .project-carousel {
-    grid-template-columns: 1fr;
+  .sticker {
+    font-size: 0.72rem !important;
+    padding: 6px 12px !important;
   }
 
-  .carousel-track {
-    min-height: 700px;
+  .sticker-smiley {
+    width: 52px !important;
+    height: 52px !important;
   }
 
-  /* Ajustes do Carrossel de Projetos em Mobile */
+  .sticker-smiley svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .sticker-barcode-card {
+    padding: 8px 12px !important;
+    transform: none !important;
+    max-width: 100% !important;
+  }
+
+  /* --- Seções & Headings Gerais --- */
+  section, .featured-project-section, .info-section, .contact-box {
+    scroll-margin-top: 80px !important;
+  }
+
+  .section-heading {
+    margin-bottom: 18px !important;
+  }
+
+  .section-heading .eyebrow {
+    font-size: 0.65rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(1.4rem, 6vw, 2rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  /* --- Projetos em Destaque 01 e 02 --- */
+  .featured-project-section {
+    padding: 8px 0 20px !important;
+  }
+
+  .project-showcase-card {
+    padding: 16px 12px 20px !important;
+    border-radius: 16px !important;
+    border-width: 2.5px !important;
+    box-shadow: 4px 4px 0px #000000, 7px 7px 0px var(--blue) !important;
+  }
+
+  .project-showcase-desc {
+    font-size: 0.86rem !important;
+    line-height: 1.5 !important;
+    padding: 12px 12px !important;
+    margin-bottom: 16px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Grid dos projetos: empilhamento vertical para máxima clareza e legibilidade */
+  .project-dual-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .project-window {
+    border-radius: 10px !important;
+    border-width: 2px !important;
+  }
+
+  .project-window-header {
+    padding: 6px 10px !important;
+    gap: 6px !important;
+  }
+
+  .project-window-title {
+    font-size: 0.68rem !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  .project-window-tag {
+    font-size: 0.6rem !important;
+    padding: 2px 6px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .project-window-img-wrap {
+    height: 190px !important;
+    max-height: unset !important;
+    min-height: unset !important;
+    padding: 6px !important;
+  }
+
+  .project-window-img-wrap img {
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .project-window.single-window .project-window-img-wrap {
+    height: 210px !important;
+    max-height: unset !important;
+  }
+
+  .project-window.single-window .project-window-img-wrap img {
+    max-height: 100% !important;
+  }
+
+  .project-img-overlay-hint {
+    bottom: 6px !important;
+    right: 6px !important;
+    padding: 3px 8px !important;
+    font-size: 0.62rem !important;
+    opacity: 0.9 !important;
+    transform: none !important;
+  }
+
+  .project-highlights-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .highlight-pill {
+    padding: 9px 12px !important;
+    border-radius: 10px !important;
+  }
+
+  .highlight-icon {
+    font-size: 1rem !important;
+  }
+
+  .highlight-text {
+    font-size: 0.78rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .project-actions-row {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .project-actions-row .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.72rem 1rem !important;
+    font-size: 0.86rem !important;
+  }
+
+  /* --- Console Game Boy Handheld Retrô (#sobre) --- */
+  .gameboy-console {
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 18px 18px 46px 18px !important;
+    border-width: 2.5px !important;
+    padding: 10px 10px 18px !important;
+    margin: 0 auto 24px !important;
+    box-shadow: 4px 4px 0px #000000, 7px 7px 0px var(--pink) !important;
+  }
+
+  .gameboy-top-bar {
+    padding-bottom: 8px !important;
+    margin-bottom: 10px !important;
+    font-size: 0.58rem !important;
+  }
+
+  .gameboy-power-switch {
+    padding: 1px 6px !important;
+  }
+
+  .gameboy-top-grooves span {
+    width: 16px !important;
+    height: 3px !important;
+  }
+
+  .gameboy-screen-bezel {
+    border-radius: 12px 12px 20px 12px !important;
+    padding: 6px 6px 0 !important;
+    border-width: 2px !important;
+  }
+
+  .gameboy-bezel-header {
+    padding: 0 2px 6px !important;
+  }
+
+  .gameboy-battery-indicator {
+    gap: 4px !important;
+  }
+
+  .battery-led {
+    width: 7px !important;
+    height: 7px !important;
+  }
+
+  .battery-label {
+    font-size: 0.5rem !important;
+  }
+
+  .gameboy-brand-title {
+    font-size: 0.9rem !important;
+  }
+
+  .gb-color-tag {
+    font-size: 0.8rem !important;
+  }
+
+  .arcade-header-bar {
+    padding: 5px 8px !important;
+    font-size: 0.65rem !important;
+  }
+
+  .arcade-status-tag {
+    font-size: 0.7rem !important;
+    padding: 2px 6px !important;
+  }
+
+  .arcade-scores {
+    gap: 8px !important;
+    font-size: 0.62rem !important;
+  }
+
+  .arcade-screen-viewport {
+    height: 85px !important;
+  }
+
+  .arcade-profile-area {
+    padding: 10px 6px 0 !important;
+    gap: 8px !important;
+  }
+
+  .pixel-speech-bubble {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 10px 10px !important;
+    border-radius: 8px !important;
+    border-width: 2px !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+  }
+
+  .speech-speaker-row {
+    margin-bottom: 4px !important;
+  }
+
+  .pokemon-badge {
+    font-size: 0.65rem !important;
+    padding: 1px 5px !important;
+  }
+
+  .speech-text {
+    font-size: 0.82rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .arcade-character-stage {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .samuel-portrait-cutout {
+    max-height: 145px !important;
+  }
+
+  .arcade-side-sticker {
+    padding: 3px 5px !important;
+    bottom: 6px !important;
+    border-radius: 5px !important;
+    border-width: 1.5px !important;
+    gap: 0 !important;
+  }
+
+  .arcade-side-sticker.left-sticker {
+    left: 0 !important;
+    transform: rotate(-3deg) !important;
+  }
+
+  .arcade-side-sticker.right-sticker {
+    right: 0 !important;
+    transform: rotate(3deg) !important;
+  }
+
+  .sticker-chip {
+    font-size: 0.58rem !important;
+  }
+
+  .sticker-chip-sub {
+    font-size: 0.48rem !important;
+  }
+
+  .gameboy-controls-area {
+    padding-top: 10px !important;
+    gap: 8px !important;
+  }
+
+  .gameboy-chassis-logo span:first-child {
+    font-size: 1.15rem !important;
+  }
+
+  .gameboy-chassis-logo .logo-sub {
+    font-size: 0.5rem !important;
+  }
+
+  .gameboy-buttons-row {
+    padding: 0 !important;
+    gap: 8px !important;
+    justify-content: space-around !important;
+  }
+
+  .gameboy-dpad-wrap {
+    width: 76px !important;
+    height: 76px !important;
+  }
+
+  .dpad-cross {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+  .dpad-up, .dpad-down {
+    left: 24px !important;
+    width: 24px !important;
+    height: 25px !important;
+  }
+
+  .dpad-left, .dpad-right {
+    top: 24px !important;
+    width: 25px !important;
+    height: 24px !important;
+  }
+
+  .dpad-center {
+    top: 24px !important;
+    left: 24px !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .action-buttons-pill {
+    padding: 4px 8px !important;
+    gap: 8px !important;
+    transform: rotate(-20deg) !important;
+  }
+
+  .gameboy-round-btn {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.78rem !important;
+  }
+
+  .gameboy-bottom-row {
+    padding: 4px 6px 2px !important;
+  }
+
+  .gameboy-meta-buttons {
+    margin-left: 6px !important;
+    gap: 8px !important;
+  }
+
+  .rubber-pill-btn {
+    width: 26px !important;
+    height: 8px !important;
+  }
+
+  .meta-btn-item span {
+    font-size: 0.58rem !important;
+  }
+
+  .gameboy-speaker-grille span {
+    width: 26px !important;
+    height: 3px !important;
+  }
+
+  .gameboy-phones-jack {
+    font-size: 0.52rem !important;
+  }
+
+  /* --- Carrossel de Outros Projetos (#outros-projetos) --- */
+  .gallery-section {
+    padding: 8px 0 20px !important;
+  }
+
+  .gallery-lead-text {
+    font-size: 0.86rem !important;
+    line-height: 1.5 !important;
+    padding: 0 4px !important;
+  }
+
+  .projects-carousel-wrapper {
+    margin-top: 18px !important;
+  }
+
   .carousel-arrow {
-    display: none;
+    display: none !important;
+  }
+
+  .projects-carousel-track {
+    gap: 12px !important;
+    padding: 6px 2px 16px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   .carousel-project-card {
-    flex: 0 0 260px;
-    max-width: 260px;
+    flex: 0 0 84vw !important;
+    max-width: 300px !important;
+    border-radius: 12px !important;
+    border-width: 2px !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+    scroll-snap-align: center !important;
+  }
+
+  .carousel-card-header {
+    padding: 6px 10px !important;
   }
 
   .carousel-img-wrap {
-    height: 175px;
+    height: 185px !important;
+  }
+
+  .carousel-img-wrap img {
+    padding: 6px !important;
+  }
+
+  .carousel-card-body {
+    padding: 10px 12px 14px !important;
+  }
+
+  .carousel-card-body h4 {
+    font-size: 0.95rem !important;
+  }
+
+  .carousel-card-body p {
+    font-size: 0.78rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* --- Seção de Contato (#contato) --- */
+  .contact-box {
+    padding: 24px 14px !important;
+    border-radius: 16px !important;
+    border-width: 2.5px !important;
+    box-shadow: 4px 4px 0px #000000, 7px 7px 0px var(--pink) !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 18px !important;
+    margin-top: 20px !important;
+  }
+
+  .contact-content h2 {
+    font-size: clamp(1.5rem, 6.8vw, 2.3rem) !important;
+    line-height: 1.05 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .contact-content p {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .contact-actions {
+    width: 100% !important;
+    min-width: unset !important;
+    gap: 10px !important;
+  }
+
+  .contact-actions .btn {
+    width: 100% !important;
+    padding: 0.72rem 0.8rem !important;
+    font-size: 0.8rem !important;
+    justify-content: center !important;
+    white-space: normal !important;
+    word-break: break-all !important;
+  }
+
+  /* --- Footer --- */
+  .site-footer {
+    padding: 24px 8px 16px !important;
+  }
+
+  .footer-tags {
+    gap: 6px !important;
+    font-size: 0.62rem !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .site-footer p {
+    font-size: 0.74rem !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+  }
+
+  /* --- Modal Lightbox --- */
+  .lightbox-modal {
+    padding: 12px !important;
+  }
+
+  .lightbox-box {
+    border-radius: 12px !important;
+    border-width: 2px !important;
+  }
+
+  .lightbox-header {
+    padding: 8px 10px !important;
+  }
+
+  .lightbox-title {
+    font-size: 0.75rem !important;
+  }
+
+  .lightbox-close-btn {
+    font-size: 0.68rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .lightbox-img-wrap {
+    padding: 8px !important;
+    max-height: 80vh !important;
+  }
+}
+
+/* Ajustes finos para telas ultra-compactas (menores que 380px) */
+@media (max-width: 380px) {
+  .page-shell {
+    width: calc(100% - 16px) !important;
+  }
+
+  .hero-poster-container {
+    padding: 18px 10px !important;
+  }
+
+  .hero-pixel-title {
+    font-size: 1.6rem !important;
+  }
+
+  .gameboy-buttons-row {
+    gap: 4px !important;
+  }
+
+  .gameboy-dpad-wrap {
+    transform: scale(0.92);
+    transform-origin: left center;
+  }
+
+  .action-buttons-pill {
+    transform: scale(0.92) rotate(-20deg) !important;
+    transform-origin: right center;
+  }
+
+  .contact-actions .btn {
+    font-size: 0.74rem !important;
   }
 }
